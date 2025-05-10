@@ -36,7 +36,7 @@ function initSidebarToggler() {
   const toggleButton = document.createElement('button')
   toggleButton.id = 'wa-sidebar-toggler'
   toggleButton.innerHTML = '<span>◀</span>'
-  toggleButton.title = 'Toggle Sidebar'
+  toggleButton.title = 'Toggle Sidebar (Alt+S)'
 
   // Add the button to the page
   document.body.appendChild(toggleButton)
@@ -56,6 +56,14 @@ function initSidebarToggler() {
   // Add click event listener to the toggle button
   toggleButton.addEventListener('click', () => {
     toggleSidebar(sidebarContainer, toggleButton)
+  })
+
+  // Add keyboard shortcut listener
+  document.addEventListener('keydown', e => {
+    if ((e.key === 'b' || e.key === 'B') && e.ctrlKey) {
+      e.preventDefault()
+      toggleSidebar(sidebarContainer, toggleButton)
+    }
   })
 }
 

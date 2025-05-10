@@ -5,6 +5,7 @@ A Chrome extension that adds a toggle button to show/hide the sidebar in WhatsAp
 ## Features
 
 - Adds a toggle button to the WhatsApp Web interface
+- Keyboard shortcut (Alt+S) to toggle sidebar visibility
 - Remembers sidebar state between sessions
 - Simple and lightweight
 - Works only on WhatsApp Web (https://web.whatsapp.com/)
@@ -28,13 +29,15 @@ A Chrome extension that adds a toggle button to show/hide the sidebar in WhatsAp
 
 1. Go to WhatsApp Web (https://web.whatsapp.com/)
 2. Wait for WhatsApp to fully load.
-3. You should see a small green button on the left side of the screen.
-4. Click this button to toggle the sidebar visibility.
+3. You can toggle the sidebar in two ways:
+   - Click the small green button on the left side of the screen
+   - Press Alt+S keyboard shortcut
 
 ## Troubleshooting
 
 - If the toggle button doesn't appear, try refreshing the page.
 - Make sure you're on https://web.whatsapp.com/
+- If the keyboard shortcut doesn't work, click somewhere on the WhatsApp Web page first to ensure it has focus
 - If the extension doesn't work after WhatsApp updates, please check for an updated version of this extension.
 
 ## License
