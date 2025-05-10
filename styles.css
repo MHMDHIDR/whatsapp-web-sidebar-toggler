@@ -1,0 +1,44 @@
+#wa-sidebar-toggler {
+  position: fixed;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  z-index: 1000;
+  background-color: #00a884;
+  color: white;
+  border: none;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  width: 24px;
+  height: 48px;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.3s, left 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+#wa-sidebar-toggler:hover {
+  opacity: 1;
+}
+
+.wa-sidebar-hidden {
+  width: 0 !important;
+  min-width: 0 !important;
+  max-width: 0 !important;
+  overflow: hidden !important;
+  opacity: 0 !important;
+  transition: all 0.3s ease-in-out !important;
+}
+
+.wa-sidebar-hidden + div {
+  width: 100% !important;
+  transition: width 0.3s ease-in-out !important;
+}
+
+/* When sidebar is hidden, move the toggle button */
+.wa-sidebar-hidden ~ #wa-sidebar-toggler {
+  left: 0;
+}
