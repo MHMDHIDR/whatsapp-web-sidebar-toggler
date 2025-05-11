@@ -60,7 +60,10 @@ function initSidebarToggler() {
 
   // Add keyboard shortcut listener
   document.addEventListener('keydown', e => {
-    if ((e.key === 'b' || e.key === 'B') && e.ctrlKey) {
+    const isMac = navigator.platform.toUpperCase().indexOf('MAC') >= 0
+    const ctrlOrCmdPressed = isMac ? e.metaKey : e.ctrlKey
+
+    if ((e.key === 'b' || e.key === 'B') && ctrlOrCmdPressed) {
       e.preventDefault()
       toggleSidebar(sidebarContainer, toggleButton)
     }
